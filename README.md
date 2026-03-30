@@ -1,18 +1,40 @@
-# Dashboard de Inteligência de Compras e Hábitos de Consumo.
+🛒 Dashboard de Inteligência de Compras e Hábitos de Consumo
+![Capa do Dashboard](screenshots/gasto-total-categoria.png)
+Este projeto nasceu da necessidade de transformar dados brutos de consumo doméstico em insights acionáveis para gestão financeira e economia pessoal. Utilizando Power BI, desenvolvi uma solução que monitora a variação de preços e o volume de compras, permitindo uma visão estratégica sobre o custo de vida.
 
-###Desenvolvi uma ferramenta para monitorar variações de preços e volume de compras, transformando dados brutos de mercado em insights de economia doméstica.
+![Gif Dashboard](screenshots/demostracao.gif)
 
+🚀 Desafios e Soluções Técnicas
+O maior desafio deste projeto não foi a visualização, mas o tratamento de dados (ETL) de uma base heterogênea. Abaixo, destaco as principais implementações:
 
-"Como um Analista de Dados lida com as compras do mês? 🛒📊
+🛠️ Power Query (ETL & Data Cleaning)
+Normalização de Dados: Implementação de lógica condicional para agrupar SKUs variados em categorias limpas (ex: "Pão", "Achocolatados", "Hortifrúti").
 
-Decidi transformar minha lista de mercado em um projeto de BI completo. O maior desafio não foi o gráfico, mas o tratamento dos dados:
-✅ Normalizei nomes de produtos usando lógica condicional (Pão, Achocolatados, etc).
-✅ Criei uma regra de ordenação personalizada em DAX para priorizar itens por volume (KG).
-✅ Desenvolvi uma visão clara de onde o orçamento está sendo alocado.
+Padronização de Unidades: Tratamento de inconsistências entre itens vendidos por Unidade (UN) e Peso (KG), garantindo que a análise de volume fosse matematicamente precisa.
 
+Data Cleaning: Ajuste de tipos de dados, máscaras de data e tratamento de separadores decimais para compatibilidade total entre Excel e Power BI.
 
-Power Query (ETL): Normalização de nomes de produtos (Regex/Lógica Condicional) e tratamento de unidades de medida (KG vs UN).
+📊 DAX & Modelagem (Business Intelligence)
+Ranking Dinâmico: Criação de medidas de ranking para destacar automaticamente os itens de maior consumo (Top 5).
 
-DAX: Criação de medidas dinâmicas e lógica de ordenação personalizada.
+Lógica de Ordenação Personalizada: Desenvolvimento de uma métrica de bônus via DAX para priorizar visualmente itens de peso (KG) no topo do gráfico, separando-os de itens por unidade.
 
-Data Modeling: Estruturação de colunas calculadas para análise de categorias.
+Métricas de Frequência: Uso de DISTINCTCOUNT para monitorar o volume de idas ao mercado, permitindo analisar a periodicidade do abastecimento doméstico.
+
+Cálculo de Variação Temporal: Gráficos de séries temporais para acompanhar a volatilidade de preços de produtos específicos ao longo do mês.
+
+📈 Visualizações de Destaque
+Análise de Pareto/Volume: Identificação clara de quais produtos representam 80% do volume de compras.
+
+Formatação Condicional: Uso de cores estratégicas para guiar o olhar do usuário para insights de preço e categoria.
+
+Filtros Dinâmicos: Segmentação por dia da semana e categoria de produto para análises granulares.
+
+🛠️ Tecnologias Utilizadas
+Microsoft Power BI (Desktop & Service)
+
+DAX (Data Analysis Expressions)
+
+Power Query (M Language)
+
+Excel (Data Source)
