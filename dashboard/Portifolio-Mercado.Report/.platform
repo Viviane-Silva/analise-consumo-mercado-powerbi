@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Portifolio-Mercado"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "c9fd74ce-9dff-4163-a85c-b33dd72d0ab4"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Portifolio-Mercado"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "aa4a87ca-2e48-4c22-afbc-9e72e80e939c"
+  }
+}

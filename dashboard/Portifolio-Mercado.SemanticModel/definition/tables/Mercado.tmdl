@@ -1,0 +1,195 @@
+table Mercado
+	lineageTag: bd49275d-36e3-44b6-b4fe-a2245ed6ff80
+
+	measure 'Total Gasto' = SUM(Mercado[Tot (R$)])
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: acf16ed8-cb8a-40c5-8b54-f8874ea4fc16
+
+	measure 'Qtd Itens' = COUNT(Mercado[Descrição do Produto])
+		formatString: 0
+		lineageTag: 4518218e-0973-482e-a567-094a54d869bb
+
+	measure 'Ticket Médio' = DIVIDE([Total Gasto],[Qtd Itens])
+		lineageTag: 95e0f2c3-4398-415e-aeb3-f17d39062718
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Idas ao Mercado' = DISTINCTCOUNT(Mercado[Data Compra])
+		formatString: 0
+		lineageTag: 4f1bb156-063c-4655-a1aa-b6416d213da7
+
+	measure 'Total Qtd' = SUM(Mercado[Qtde])
+		lineageTag: 1ebc6664-e2cf-40a9-b9bd-e5f5274c8c07
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Qtd com Unidade' = ```
+			
+			VAR Quantidade = SUM(Mercado[Qtde]) 
+			VAR UnidadeFinal =
+			IF(CONTAINSSTRING(SELECTEDVALUE(Mercado[Personalizar]), "KG"), "KG", SELECTEDVALUE(Mercado[Unid], "UN"))
+			RETURN
+			FORMAT(Quantidade, "#,##0.00") & " " & UnidadeFinal
+			```
+		lineageTag: 8d8578e7-19de-4f1b-bf56-57db384defc1
+
+	measure 'Ranking Medida' =
+			
+			VAR  Quantidade = [Total Qtd]
+			VAR Quilo = IF(CONTAINSSTRING(SELECTEDVALUE(Mercado[Personalizar]), "KG"),1,0)
+			RETURN
+			IF(Quilo = 1, 1000 + Quantidade, Quantidade)
+		lineageTag: 75af45f4-24eb-4eb0-9294-c3d7bc6eecb0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Ranking Destq' = RANKX(ALL(Mercado[Personalizar]), [Total Qtd],,DESC)
+		formatString: 0
+		lineageTag: 480a722d-7a9d-45c9-b216-111b1e6a2b14
+
+	measure 'Total Ida Mercado' = DISTINCTCOUNT(Mercado[Data Compra])
+		formatString: 0
+		lineageTag: e1e4ee6c-b3af-4239-9b88-a49c3b6b5478
+
+	column 'Descrição do Produto'
+		dataType: string
+		lineageTag: 182a8898-c9e3-4f49-9ca8-719d4007757b
+		summarizeBy: none
+		sourceColumn: Descrição do Produto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Categoria
+		dataType: string
+		lineageTag: 609066da-b6d1-46ed-af1b-c2d425a37d30
+		summarizeBy: none
+		sourceColumn: Categoria
+
+		annotation SummarizationSetBy = Automatic
+
+	column Qtde
+		dataType: double
+		lineageTag: 411d0151-6fb6-4b76-85d7-349b4b5f758c
+		summarizeBy: sum
+		sourceColumn: Qtde
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Unid
+		dataType: string
+		lineageTag: 8993809a-9623-48f2-9d1f-756fcea48e40
+		summarizeBy: none
+		sourceColumn: Unid
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Vlr Unit (R$)'
+		dataType: double
+		lineageTag: f0141c60-b54c-4f82-aedb-42c4a5679c9a
+		summarizeBy: sum
+		sourceColumn: Vlr Unit (R$)
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Tot (R$)'
+		dataType: double
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 66203783-9e40-435d-8407-66813f47b067
+		summarizeBy: sum
+		sourceColumn: Tot (R$)
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
+
+	column 'Data Compra'
+		dataType: dateTime
+		formatString: dd/mm
+		lineageTag: 756e18a3-82bf-48d9-a23c-139fa89ddd6d
+		summarizeBy: none
+		sourceColumn: Data Compra
+
+		variation Variation
+			isDefault
+			relationship: 65e9de15-fefa-4a8f-8220-8e9c0d610b6c
+			defaultHierarchy: LocalDateTable_74c9e57e-2fe0-44c1-bbae-982de0275c5f.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	column 'Dia da Semana' = FORMAT(Mercado[Data Compra], "dddd", "pt-BR")
+		lineageTag: fd929dc9-3b17-4d68-aab9-9070f0be7992
+		summarizeBy: none
+		sortByColumn: 'Ordem Dia'
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Filtro Data' = UPPER(SUBSTITUTE(FORMAT('Mercado'[Data Compra], "dddd"), "-feira", "")) & " - " & FORMAT(Mercado[Data Compra], "dd/mm/yyyy")
+		lineageTag: a7a1757f-11a6-4993-994f-40e3122c9d0c
+		summarizeBy: none
+		sortByColumn: 'Data Compra'
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Ordem Dia' = WEEKDAY(Mercado[Data Compra],2)
+		formatString: 0
+		lineageTag: fc833797-c184-4211-ad30-44116fd235b4
+		summarizeBy: sum
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Ordem Grandeza' = IF(Mercado[Unid] = "KG", 10000 + SUM(Mercado[Qtde]), Mercado[Qtde])
+		lineageTag: 9a34b68f-a939-4c58-a81e-d667be60524f
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Personalizar
+		dataType: string
+		lineageTag: 33b5f45d-53a4-4d21-8d89-f88e483e9808
+		summarizeBy: none
+		sourceColumn: Personalizar
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Mercado = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(File.Contents("C:\Users\vivia\OneDrive\Documentos\CursoDataScience\Portifolio\dados-mercado\Mercado03-2026.xlsx"), null, true),
+				    Mercado_Table = Fonte{[Item="Mercado",Kind="Table"]}[Data],
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Mercado_Table,{{"Descrição do Produto", type text}, {"Categoria", type text}, {"Qtde", type number}, {"Unid", type text}, {"Vlr Unit (R$)", type number}, {"Tot (R$)", type number}, {"Data Compra", type date}, {"Dia de Semana", type any}}),
+				    #"Linhas Filtradas" = Table.SelectRows(#"Tipo Alterado", each true),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Linhas Filtradas",{"Dia de Semana"}),
+				    #"Valor Substituído" = Table.ReplaceValue(#"Colunas Removidas","PROMOCAO","",Replacer.ReplaceText,{"Descrição do Produto"}),
+				    #"Linhas Classificadas" = Table.Sort(#"Valor Substituído",{{"Descrição do Produto", Order.Ascending}}),
+				    #"Coluna Condicional Adicionada" = Table.AddColumn(#"Linhas Classificadas", "Produto Agrupado", each if Text.Contains([Descrição do Produto], "CAPPUCCINO LOR PRE") then "CAPPUCCINO LOR " else if Text.Contains([Descrição do Produto], "IOGURTE TIROL") then "IOGURTE TIROL" else null),
+				    #"Colunas Removidas1" = Table.RemoveColumns(#"Coluna Condicional Adicionada",{"Produto Agrupado"}),
+				    #"Coluna Personalizada Adicionada" = Table.AddColumn(#"Colunas Removidas1", "Personalizar", each let splitDescriçãodoProduto = Splitter.SplitTextByDelimiter(" ", QuoteStyle.None)([Descrição do Produto]) in Text.Combine({Text.Reverse(Text.Middle(Text.Reverse([Descrição do Produto]), 22, 13)), Text.Reverse(Text.Middle(Text.Reverse(splitDescriçãodoProduto{0}?), 2)), Text.Middle(splitDescriçãodoProduto{0}?, 5)}), type text),
+				    #"Colunas Removidas2" = Table.RemoveColumns(#"Coluna Personalizada Adicionada",{"Personalizar"}),
+				    #"Coluna Condicional Adicionada1" = Table.AddColumn(#"Colunas Removidas2", "Personalizar", each if Text.Contains([Descrição do Produto], "IOGURTE") then "IOGURTE" else if Text.Contains([Descrição do Produto], "BATATA") then "BATATA KG" else if Text.Contains([Descrição do Produto], "BANANA B") then "BANANA KG" else if Text.Contains([Descrição do Produto], "BARRA") then "BARRA CEREAL" else if Text.Contains([Descrição do Produto], "BEB ENERG") then "ENERGETICO" else if Text.Contains([Descrição do Produto], "FARELO") then "AVEIA" else if Text.Contains([Descrição do Produto], "BISC") then "BOLACHA" else if Text.Contains([Descrição do Produto], "REFRIG") then "REFRIGERANTE" else if Text.Contains([Descrição do Produto], "YAKULT") then "YAKULT" else if Text.Contains([Descrição do Produto], "LAC 3") then "WHEY CAIXINHA" else if Text.Contains([Descrição do Produto], "CHOCOLATE TP") then "ACHOCOLATADO CAIXINHA" else if Text.Contains([Descrição do Produto], "ALIM CAST") then "BARRA CEREAL" else if Text.Contains([Descrição do Produto], "CEREAIS NUTRY") then "BARRA CEREAL" else if Text.Contains([Descrição do Produto], "SARDINHA") then "SARDINHA" else if Text.Contains([Descrição do Produto], "TOMATE L") then "TOMATE KG" else if Text.Contains([Descrição do Produto], "PIRAKI CH") then "ACHOCOLATADO CAIXINHA" else if Text.Contains([Descrição do Produto], "CERVEJA") then "CERVEJA" else if Text.StartsWith([Descrição do Produto], "CHOC ") then "CHOCOLATE " else if Text.StartsWith([Descrição do Produto], "LEITE") then "LEITE" else if Text.StartsWith([Descrição do Produto], "LIMAO") then "LIMAO KG" else if Text.Contains([Descrição do Produto], "HALLS") then "HALLS" else if Text.StartsWith([Descrição do Produto], "CAFE") then "CAFE" else if Text.StartsWith([Descrição do Produto], "MAMAO FO") then "MAMAO KG" else if Text.StartsWith([Descrição do Produto], "ALFACE") then "ALFACE" else if Text.StartsWith([Descrição do Produto], "AGRIAO") then "AGRIAO" else if Text.StartsWith([Descrição do Produto], "MELAO") then "MELAO KG" else if Text.StartsWith([Descrição do Produto], "MACA") then "MACA KG" else if Text.StartsWith([Descrição do Produto], "CAPPUCCINO") then "SACHE CAFE CAPPUCCINO" else if Text.Contains([Descrição do Produto], "MILHO V") then "MILHO" else if Text.StartsWith([Descrição do Produto], "CEBOLA") then "CEBOLA KG" else if Text.StartsWith([Descrição do Produto], "PAO") then "PAO KG" else if Text.Contains([Descrição do Produto], "QUEIJO R") then "QUEIJO RALADO" else if Text.Contains([Descrição do Produto], "MUSSARELA") then "QUEIJO" else if Text.Contains([Descrição do Produto], "SABON") then "SABONETE" else if Text.StartsWith([Descrição do Produto], "RUCULA") then "RUCULA" else if Text.Contains([Descrição do Produto], "SHAMPOO") then "SHAMPOO" else if Text.StartsWith([Descrição do Produto], "OVO") then "OVO" else if Text.StartsWith([Descrição do Produto], "MAMAO PA") then "MAMAO PAPAYA" else [Descrição do Produto]),
+				    #"Valor Substituído1" = Table.ReplaceValue(#"Coluna Condicional Adicionada1","PATINHO MOIDO BOV BEST BEEF ","PATINHO MOIDO KG",Replacer.ReplaceText,{"Descrição do Produto"}),
+				    #"Valor Substituído2" = Table.ReplaceValue(#"Valor Substituído1","PATINHO MOIDO BOV BEST BEEF ","PATINHO MOIDO KG",Replacer.ReplaceText,{"Personalizar"}),
+				    #"Valor Substituído3" = Table.ReplaceValue(#"Valor Substituído2","FILE PEITO AVE SERRA RESF (PED) (P) K","FILE PEITO AVE KG",Replacer.ReplaceText,{"Personalizar"})
+				in
+				    #"Valor Substituído3"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

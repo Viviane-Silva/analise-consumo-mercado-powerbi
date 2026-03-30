@@ -1,0 +1,1890 @@
+cultureInfo pt-BR
+
+	linguisticMetadata =
+			{
+			  "Version": "4.1.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "mercado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mercado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mercado": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mercado.descrição_do_produto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mercado",
+			          "ConceptualProperty": "Descrição do Produto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "descrição do produto": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mercado.categoria": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mercado",
+			          "ConceptualProperty": "Categoria"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "categoria": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mercado.qtde": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mercado",
+			          "ConceptualProperty": "Qtde"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "qtde": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mercado.unid": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mercado",
+			          "ConceptualProperty": "Unid"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "unid": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mercado.vlr_unit_r": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mercado",
+			          "ConceptualProperty": "Vlr Unit (R$)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vlr unit (r$)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "vlr unit": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "mercado.tot_r": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mercado",
+			          "ConceptualProperty": "Tot (R$)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tot (r$)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tot": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "tot (r dollar )": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        }
+			      ]
+			    },
+			    "mercado.data_compra": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mercado",
+			          "ConceptualProperty": "Data Compra"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "data compra": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "information compra": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "fact compra": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "info compra": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "statistic compra": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "document compra": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "figure compra": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "record compra": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "mercado.data_compra.hierarquia_de_data": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mercado",
+			          "VariationSource": "Data Compra",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "hierarquia de data": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "hierarquia de information": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de fact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de info": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de statistic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de document": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "hierarquia de figure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "hierarquia de record": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "mercado.data_compra.ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mercado",
+			          "VariationSource": "Data Compra",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Ano"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data compra ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information compra ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact compra ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "info compra ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "statistic compra ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "document compra ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "figure compra ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "record compra ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "mercado.data_compra.trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mercado",
+			          "VariationSource": "Data Compra",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data compra trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information compra trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact compra trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "info compra trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "statistic compra trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "document compra trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "figure compra trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "record compra trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "mercado.data_compra.mê": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mercado",
+			          "VariationSource": "Data Compra",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Mês"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mê": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data compra mê": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information compra mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact compra mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "info compra mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "statistic compra mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "document compra mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "figure compra mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "record compra mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "mercado.data_compra.dia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mercado",
+			          "VariationSource": "Data Compra",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Dia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dia": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data compra dia": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information compra dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact compra dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "info compra dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "statistic compra dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "document compra dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "figure compra dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "record compra dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "mercado.dia_da_semana": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mercado",
+			          "ConceptualProperty": "Dia da Semana"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dia da semana": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mercado.filtro_data": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mercado",
+			          "ConceptualProperty": "Filtro Data"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "filtro data": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "filtro information": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "filtro fact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "filtro info": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "filtro statistic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "filtro document": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "filtro figure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "filtro record": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "mercado.ordem_dia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mercado",
+			          "ConceptualProperty": "Ordem Dia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ordem dia": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mercado.total_gasto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mercado",
+			          "ConceptualProperty": "Total Gasto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total gasto": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "aggregate gasto": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "overall gasto": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "mercado.qtd_itens": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mercado",
+			          "ConceptualProperty": "Qtd Itens"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "qtd itens": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mercado.ticket_médio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mercado",
+			          "ConceptualProperty": "Ticket Médio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ticket médio": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mercado.idas_ao_mercado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mercado",
+			          "ConceptualProperty": "Idas ao Mercado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "idas ao mercado": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mercado.total_qtd": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mercado",
+			          "ConceptualProperty": "Total Qtd"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total qtd": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "aggregate qtd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "overall qtd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "Qtd Total (kg/un)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mercado.qtd_com_unidade": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mercado",
+			          "ConceptualProperty": "Qtd com Unidade"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "qtd com unidade": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "mercado_is_expensive": {
+			      "Binding": {
+			        "ConceptualEntity": "Mercado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mercado": {
+			          "Target": {
+			            "Entity": "mercado"
+			          }
+			        },
+			        "mercado.tot_r": {
+			          "Target": {
+			            "Entity": "mercado.tot_r"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "mercado"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "mercado.tot_r"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tot_r_indicates_how_expensive_mercado_are"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mercado"
+			            },
+			            "Object": {
+			              "Role": "mercado.tot_r"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mercado_have_tot_r"
+			        }
+			      ]
+			    },
+			    "mercado_has_descrição_do_produto": {
+			      "Binding": {
+			        "ConceptualEntity": "Mercado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mercado": {
+			          "Target": {
+			            "Entity": "mercado"
+			          }
+			        },
+			        "mercado.descrição_do_produto": {
+			          "Target": {
+			            "Entity": "mercado.descrição_do_produto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mercado"
+			            },
+			            "Object": {
+			              "Role": "mercado.descrição_do_produto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mercado_have_descrição_do_produtos"
+			        }
+			      ]
+			    },
+			    "mercado_has_categoria": {
+			      "Binding": {
+			        "ConceptualEntity": "Mercado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mercado": {
+			          "Target": {
+			            "Entity": "mercado"
+			          }
+			        },
+			        "mercado.categoria": {
+			          "Target": {
+			            "Entity": "mercado.categoria"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mercado"
+			            },
+			            "Object": {
+			              "Role": "mercado.categoria"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mercado_have_categorias"
+			        }
+			      ]
+			    },
+			    "mercado_has_qtde": {
+			      "Binding": {
+			        "ConceptualEntity": "Mercado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mercado": {
+			          "Target": {
+			            "Entity": "mercado"
+			          }
+			        },
+			        "mercado.qtde": {
+			          "Target": {
+			            "Entity": "mercado.qtde"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mercado"
+			            },
+			            "Object": {
+			              "Role": "mercado.qtde"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mercado_have_qtdes"
+			        }
+			      ]
+			    },
+			    "mercado_has_unid": {
+			      "Binding": {
+			        "ConceptualEntity": "Mercado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mercado": {
+			          "Target": {
+			            "Entity": "mercado"
+			          }
+			        },
+			        "mercado.unid": {
+			          "Target": {
+			            "Entity": "mercado.unid"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mercado"
+			            },
+			            "Object": {
+			              "Role": "mercado.unid"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mercado_have_unids"
+			        }
+			      ]
+			    },
+			    "mercado_has_vlr_unit_r": {
+			      "Binding": {
+			        "ConceptualEntity": "Mercado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mercado": {
+			          "Target": {
+			            "Entity": "mercado"
+			          }
+			        },
+			        "mercado.vlr_unit_r": {
+			          "Target": {
+			            "Entity": "mercado.vlr_unit_r"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mercado"
+			            },
+			            "Object": {
+			              "Role": "mercado.vlr_unit_r"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mercado_have_vlr_unit_r"
+			        }
+			      ]
+			    },
+			    "mercado_has_data_compra": {
+			      "Binding": {
+			        "ConceptualEntity": "Mercado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mercado": {
+			          "Target": {
+			            "Entity": "mercado"
+			          }
+			        },
+			        "mercado.data_compra": {
+			          "Target": {
+			            "Entity": "mercado.data_compra"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mercado"
+			            },
+			            "Object": {
+			              "Role": "mercado.data_compra"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mercado_have_data_compras"
+			        }
+			      ]
+			    },
+			    "mercado_has_dia_da_semana": {
+			      "Binding": {
+			        "ConceptualEntity": "Mercado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mercado": {
+			          "Target": {
+			            "Entity": "mercado"
+			          }
+			        },
+			        "mercado.dia_da_semana": {
+			          "Target": {
+			            "Entity": "mercado.dia_da_semana"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mercado"
+			            },
+			            "Object": {
+			              "Role": "mercado.dia_da_semana"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mercado_have_dia_da_semanas"
+			        }
+			      ]
+			    },
+			    "mercado_has_filtro_data": {
+			      "Binding": {
+			        "ConceptualEntity": "Mercado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mercado": {
+			          "Target": {
+			            "Entity": "mercado"
+			          }
+			        },
+			        "mercado.filtro_data": {
+			          "Target": {
+			            "Entity": "mercado.filtro_data"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mercado"
+			            },
+			            "Object": {
+			              "Role": "mercado.filtro_data"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mercado_have_filtro_data"
+			        }
+			      ]
+			    },
+			    "mercado_has_ordem_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "Mercado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mercado": {
+			          "Target": {
+			            "Entity": "mercado"
+			          }
+			        },
+			        "mercado.ordem_dia": {
+			          "Target": {
+			            "Entity": "mercado.ordem_dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mercado"
+			            },
+			            "Object": {
+			              "Role": "mercado.ordem_dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mercado_have_ordem_dias"
+			        }
+			      ]
+			    },
+			    "mercado_has_total_gasto": {
+			      "Binding": {
+			        "ConceptualEntity": "Mercado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mercado": {
+			          "Target": {
+			            "Entity": "mercado"
+			          }
+			        },
+			        "mercado.total_gasto": {
+			          "Target": {
+			            "Entity": "mercado.total_gasto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mercado"
+			            },
+			            "Object": {
+			              "Role": "mercado.total_gasto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mercado_have_total_gasto"
+			        }
+			      ]
+			    },
+			    "mercado_has_qtd_itens": {
+			      "Binding": {
+			        "ConceptualEntity": "Mercado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mercado": {
+			          "Target": {
+			            "Entity": "mercado"
+			          }
+			        },
+			        "mercado.qtd_itens": {
+			          "Target": {
+			            "Entity": "mercado.qtd_itens"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mercado"
+			            },
+			            "Object": {
+			              "Role": "mercado.qtd_itens"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mercado_have_qtd_itens"
+			        }
+			      ]
+			    },
+			    "mercado_has_ticket_médio": {
+			      "Binding": {
+			        "ConceptualEntity": "Mercado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mercado": {
+			          "Target": {
+			            "Entity": "mercado"
+			          }
+			        },
+			        "mercado.ticket_médio": {
+			          "Target": {
+			            "Entity": "mercado.ticket_médio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mercado"
+			            },
+			            "Object": {
+			              "Role": "mercado.ticket_médio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mercado_have_ticket_médio"
+			        }
+			      ]
+			    },
+			    "mercado_has_idas_ao_mercado": {
+			      "Binding": {
+			        "ConceptualEntity": "Mercado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mercado": {
+			          "Target": {
+			            "Entity": "mercado"
+			          }
+			        },
+			        "mercado.idas_ao_mercado": {
+			          "Target": {
+			            "Entity": "mercado.idas_ao_mercado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mercado"
+			            },
+			            "Object": {
+			              "Role": "mercado.idas_ao_mercado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mercado_have_idas_ao_mercado"
+			        }
+			      ]
+			    },
+			    "mercado_has_total_qtd": {
+			      "Binding": {
+			        "ConceptualEntity": "Mercado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mercado": {
+			          "Target": {
+			            "Entity": "mercado"
+			          }
+			        },
+			        "mercado.total_qtd": {
+			          "Target": {
+			            "Entity": "mercado.total_qtd"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mercado"
+			            },
+			            "Object": {
+			              "Role": "mercado.total_qtd"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mercado_have_total_qtd"
+			        }
+			      ]
+			    },
+			    "mercado_has_qtd_com_unidade": {
+			      "Binding": {
+			        "ConceptualEntity": "Mercado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mercado": {
+			          "Target": {
+			            "Entity": "mercado"
+			          }
+			        },
+			        "mercado.qtd_com_unidade": {
+			          "Target": {
+			            "Entity": "mercado.qtd_com_unidade"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mercado"
+			            },
+			            "Object": {
+			              "Role": "mercado.qtd_com_unidade"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mercado_have_qtd_com_unidade"
+			        }
+			      ]
+			    },
+			    "mercado_data_compra_has_hierarquia_de_data": {
+			      "Binding": {
+			        "ConceptualEntity": "Mercado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mercado.data_compra": {
+			          "Target": {
+			            "Entity": "mercado.data_compra"
+			          }
+			        },
+			        "mercado.data_compra.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "mercado.data_compra.hierarquia_de_data"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mercado.data_compra"
+			            },
+			            "Object": {
+			              "Role": "mercado.data_compra.hierarquia_de_data"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "data_compras_have_hierarquia_de_data"
+			        }
+			      ]
+			    },
+			    "mercado_data_compra_hierarquia_de_data_has_mercado_data_compra_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "Mercado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mercado.data_compra.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "mercado.data_compra.hierarquia_de_data"
+			          }
+			        },
+			        "mercado.data_compra.ano": {
+			          "Target": {
+			            "Entity": "mercado.data_compra.ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mercado.data_compra.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "mercado.data_compra.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_anos"
+			        }
+			      ]
+			    },
+			    "mercado_data_compra_hierarquia_de_data_has_mercado_data_compra_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "Mercado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mercado.data_compra.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "mercado.data_compra.hierarquia_de_data"
+			          }
+			        },
+			        "mercado.data_compra.trimestre": {
+			          "Target": {
+			            "Entity": "mercado.data_compra.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mercado.data_compra.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "mercado.data_compra.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_trimestres"
+			        }
+			      ]
+			    },
+			    "mercado_data_compra_hierarquia_de_data_has_mercado_data_compra_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "Mercado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mercado.data_compra.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "mercado.data_compra.hierarquia_de_data"
+			          }
+			        },
+			        "mercado.data_compra.mê": {
+			          "Target": {
+			            "Entity": "mercado.data_compra.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mercado.data_compra.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "mercado.data_compra.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_mê"
+			        }
+			      ]
+			    },
+			    "mercado_data_compra_hierarquia_de_data_has_mercado_data_compra_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "Mercado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mercado.data_compra.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "mercado.data_compra.hierarquia_de_data"
+			          }
+			        },
+			        "mercado.data_compra.dia": {
+			          "Target": {
+			            "Entity": "mercado.data_compra.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mercado.data_compra.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "mercado.data_compra.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_dias"
+			        }
+			      ]
+			    },
+			    "mercado_data_compra_ano_has_mercado_data_compra_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "Mercado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mercado.data_compra.ano": {
+			          "Target": {
+			            "Entity": "mercado.data_compra.ano"
+			          }
+			        },
+			        "mercado.data_compra.trimestre": {
+			          "Target": {
+			            "Entity": "mercado.data_compra.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mercado.data_compra.ano"
+			            },
+			            "Object": {
+			              "Role": "mercado.data_compra.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "anos_have_trimestres"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mercado.data_compra.trimestre"
+			            },
+			            "Object": {
+			              "Role": "mercado.data_compra.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_anos"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "mercado.data_compra.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "mercado.data_compra.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_anos"
+			        }
+			      ]
+			    },
+			    "mercado_data_compra_trimestre_has_mercado_data_compra_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "Mercado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mercado.data_compra.trimestre": {
+			          "Target": {
+			            "Entity": "mercado.data_compra.trimestre"
+			          }
+			        },
+			        "mercado.data_compra.mê": {
+			          "Target": {
+			            "Entity": "mercado.data_compra.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mercado.data_compra.trimestre"
+			            },
+			            "Object": {
+			              "Role": "mercado.data_compra.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_mê"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mercado.data_compra.mê"
+			            },
+			            "Object": {
+			              "Role": "mercado.data_compra.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_have_trimestres"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "mercado.data_compra.mê"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "mercado.data_compra.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_are_in_trimestres"
+			        }
+			      ]
+			    },
+			    "mercado_data_compra_mê_has_mercado_data_compra_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "Mercado"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mercado.data_compra.mê": {
+			          "Target": {
+			            "Entity": "mercado.data_compra.mê"
+			          }
+			        },
+			        "mercado.data_compra.dia": {
+			          "Target": {
+			            "Entity": "mercado.data_compra.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mercado.data_compra.mê"
+			            },
+			            "Object": {
+			              "Role": "mercado.data_compra.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_have_dias"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mercado.data_compra.dia"
+			            },
+			            "Object": {
+			              "Role": "mercado.data_compra.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dias_have_mê"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "mercado.data_compra.dia"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "mercado.data_compra.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dias_are_in_mê"
+			        }
+			      ]
+			    }
+			  },
+			  "Agents": {
+			    "Internal": {
+			      "Version": "1.1.0"
+			    }
+			  }
+			}
+		contentType: json
+

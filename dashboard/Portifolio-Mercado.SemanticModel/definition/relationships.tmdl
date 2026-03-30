@@ -1,0 +1,5 @@
+relationship 65e9de15-fefa-4a8f-8220-8e9c0d610b6c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Mercado.'Data Compra'
+	toColumn: LocalDateTable_74c9e57e-2fe0-44c1-bbae-982de0275c5f.Date
+
