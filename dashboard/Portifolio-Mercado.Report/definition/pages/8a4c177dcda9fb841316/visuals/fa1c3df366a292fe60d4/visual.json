@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "fa1c3df366a292fe60d4",
   "position": {
-    "x": 1018.6195366610939,
-    "y": 35.462144733699546,
+    "x": 991.71721996656322,
+    "y": 34.239312156675425,
     "z": 1000,
     "height": 646.87843324576068,
-    "width": 261.68617148316218,
+    "width": 288.58848817769285,
     "tabOrder": 1000
   },
   "visual": {
@@ -23,7 +23,7 @@
                       "Entity": "Mercado"
                     }
                   },
-                  "Property": "Personalizar"
+                  "Property": "Produto Agrupado"
                 }
               },
               "queryRef": "Mercado.Personalizar",
@@ -93,7 +93,7 @@
                                   "Source": "m"
                                 }
                               },
-                              "Property": "Personalizar"
+                              "Property": "Produto Agrupado"
                             }
                           }
                         ],
@@ -101,7 +101,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'BATATA KG'"
+                                "Value": "'BARRA CEREAL'"
                               }
                             }
                           ]

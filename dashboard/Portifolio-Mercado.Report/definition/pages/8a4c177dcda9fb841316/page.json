@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
   "name": "8a4c177dcda9fb841316",
-  "displayName": "Variação de Preço Item",
+  "displayName": "Variação de Preço Produto",
   "displayOption": "FitToPage",
   "height": 720,
   "width": 1280

@@ -23,7 +23,7 @@
                       "Entity": "Mercado"
                     }
                   },
-                  "Property": "Personalizar"
+                  "Property": "Produto Agrupado"
                 }
               },
               "queryRef": "Mercado.Personalizar",
@@ -79,7 +79,7 @@
                       "Entity": "Mercado"
                     }
                   },
-                  "Property": "Total Qtd"
+                  "Property": "Qtd"
                 }
               },
               "queryRef": "Mercado.Total Qtd",
@@ -169,7 +169,7 @@
                                               "Entity": "Mercado"
                                             }
                                           },
-                                          "Property": "Personalizar"
+                                          "Property": "Produto Agrupado"
                                         }
                                       },
                                       "Function": 3
@@ -206,7 +206,7 @@
                                           "Entity": "Mercado"
                                         }
                                       },
-                                      "Property": "Personalizar"
+                                      "Property": "Produto Agrupado"
                                     }
                                   },
                                   "Function": 3
@@ -253,7 +253,7 @@
             "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "'Descrição Itens'"
+                  "Value": "'Descrição Produto'"
                 }
               }
             }
@@ -288,7 +288,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Quantidade por Item'"
+                  "Value": "'Quantidade Total por Produto'"
                 }
               }
             }

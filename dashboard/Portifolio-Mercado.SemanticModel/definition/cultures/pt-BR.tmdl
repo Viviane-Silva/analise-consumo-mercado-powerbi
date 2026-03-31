@@ -110,7 +110,7 @@ cultureInfo pt-BR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Mercado",
-			          "ConceptualProperty": "Tot (R$)"
+			          "ConceptualProperty": "Total Prd (R$)"
 			        }
 			      },
 			      "State": "Generated",
@@ -901,7 +901,7 @@ cultureInfo pt-BR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Mercado",
-			          "ConceptualProperty": "Total Qtd"
+			          "ConceptualProperty": "Qtd"
 			        }
 			      },
 			      "State": "Generated",
@@ -929,16 +929,6 @@ cultureInfo pt-BR
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "Qtd Total (kg/un)": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        }
 			      ]

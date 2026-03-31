@@ -5,8 +5,8 @@
     "x": 9.78266061619298,
     "y": 34.239312156675425,
     "z": 0,
-    "height": 542.93766419871031,
-    "width": 1008.8368760449009,
+    "height": 648.10126582278485,
+    "width": 968.48340100310486,
     "tabOrder": 0
   },
   "visual": {
@@ -23,11 +23,11 @@
                       "Entity": "Mercado"
                     }
                   },
-                  "Property": "Data Compra"
+                  "Property": "Filtro Data"
                 }
               },
-              "queryRef": "Mercado.Data Compra",
-              "nativeQueryRef": "Data Compra",
+              "queryRef": "Mercado.Filtro Data",
+              "nativeQueryRef": "Filtro Data",
               "active": true
             }
           ]
@@ -42,7 +42,7 @@
                       "Entity": "Mercado"
                     }
                   },
-                  "Property": "Personalizar"
+                  "Property": "Produto Agrupado"
                 }
               },
               "queryRef": "Mercado.Personalizar",
@@ -50,7 +50,7 @@
             }
           ]
         },
-        "Y": {
+        "Tooltips": {
           "projections": [
             {
               "field": {
@@ -62,35 +62,35 @@
                           "Entity": "Mercado"
                         }
                       },
-                      "Property": "Tot (R$)"
+                      "Property": "Total Prd (R$)"
                     }
                   },
-                  "Function": 4
+                  "Function": 0
                 }
               },
               "queryRef": "Sum(Mercado.Tot (R$))",
-              "nativeQueryRef": "Máximo de Tot (R$)"
+              "nativeQueryRef": "Soma de Tot (R$)"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mercado"
+                    }
+                  },
+                  "Property": "Qtd"
+                }
+              },
+              "queryRef": "Mercado.Total Qtd",
+              "nativeQueryRef": "Total Qtd"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Mercado"
-                  }
-                },
-                "Property": "Data Compra"
-              }
-            },
-            "direction": "Ascending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
     "objects": {
@@ -120,7 +120,7 @@
             "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "'Preço Produto'"
+                  "Value": "'Quantidade Item'"
                 }
               }
             }

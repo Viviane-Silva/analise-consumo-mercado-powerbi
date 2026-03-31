@@ -1,7 +1,7 @@
 table Mercado
 	lineageTag: bd49275d-36e3-44b6-b4fe-a2245ed6ff80
 
-	measure 'Total Gasto' = SUM(Mercado[Tot (R$)])
+	measure 'Total Gasto' = SUM(Mercado[Total Prd (R$)])
 		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
 		lineageTag: acf16ed8-cb8a-40c5-8b54-f8874ea4fc16
 
@@ -18,7 +18,7 @@ table Mercado
 		formatString: 0
 		lineageTag: 4f1bb156-063c-4655-a1aa-b6416d213da7
 
-	measure 'Total Qtd' = SUM(Mercado[Qtde])
+	measure Qtd = SUM(Mercado[Qtde])
 		lineageTag: 1ebc6664-e2cf-40a9-b9bd-e5f5274c8c07
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -27,7 +27,7 @@ table Mercado
 			
 			VAR Quantidade = SUM(Mercado[Qtde]) 
 			VAR UnidadeFinal =
-			IF(CONTAINSSTRING(SELECTEDVALUE(Mercado[Personalizar]), "KG"), "KG", SELECTEDVALUE(Mercado[Unid], "UN"))
+			IF(CONTAINSSTRING(SELECTEDVALUE(Mercado[Produto Agrupado]), "KG"), "KG", SELECTEDVALUE(Mercado[Unid], "UN"))
 			RETURN
 			FORMAT(Quantidade, "#,##0.00") & " " & UnidadeFinal
 			```
@@ -35,15 +35,15 @@ table Mercado
 
 	measure 'Ranking Medida' =
 			
-			VAR  Quantidade = [Total Qtd]
-			VAR Quilo = IF(CONTAINSSTRING(SELECTEDVALUE(Mercado[Personalizar]), "KG"),1,0)
+			VAR  Quantidade = [Qtd]
+			VAR Quilo = IF(CONTAINSSTRING(SELECTEDVALUE(Mercado[Produto Agrupado]), "KG"),1,0)
 			RETURN
 			IF(Quilo = 1, 1000 + Quantidade, Quantidade)
 		lineageTag: 75af45f4-24eb-4eb0-9294-c3d7bc6eecb0
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Ranking Destq' = RANKX(ALL(Mercado[Personalizar]), [Total Qtd],,DESC)
+	measure 'Ranking Destq' = RANKX(ALL(Mercado[Produto Agrupado]), [Qtd],,DESC)
 		formatString: 0
 		lineageTag: 480a722d-7a9d-45c9-b216-111b1e6a2b14
 
@@ -95,12 +95,12 @@ table Mercado
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column 'Tot (R$)'
+	column 'Total Prd (R$)'
 		dataType: double
 		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
 		lineageTag: 66203783-9e40-435d-8407-66813f47b067
 		summarizeBy: sum
-		sourceColumn: Tot (R$)
+		sourceColumn: Total Prd (R$)
 
 		annotation SummarizationSetBy = Automatic
 
@@ -159,11 +159,11 @@ table Mercado
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column Personalizar
+	column 'Produto Agrupado'
 		dataType: string
 		lineageTag: 33b5f45d-53a4-4d21-8d89-f88e483e9808
 		summarizeBy: none
-		sourceColumn: Personalizar
+		sourceColumn: Produto Agrupado
 
 		annotation SummarizationSetBy = Automatic
 
@@ -182,12 +182,13 @@ table Mercado
 				    #"Colunas Removidas1" = Table.RemoveColumns(#"Coluna Condicional Adicionada",{"Produto Agrupado"}),
 				    #"Coluna Personalizada Adicionada" = Table.AddColumn(#"Colunas Removidas1", "Personalizar", each let splitDescriçãodoProduto = Splitter.SplitTextByDelimiter(" ", QuoteStyle.None)([Descrição do Produto]) in Text.Combine({Text.Reverse(Text.Middle(Text.Reverse([Descrição do Produto]), 22, 13)), Text.Reverse(Text.Middle(Text.Reverse(splitDescriçãodoProduto{0}?), 2)), Text.Middle(splitDescriçãodoProduto{0}?, 5)}), type text),
 				    #"Colunas Removidas2" = Table.RemoveColumns(#"Coluna Personalizada Adicionada",{"Personalizar"}),
-				    #"Coluna Condicional Adicionada1" = Table.AddColumn(#"Colunas Removidas2", "Personalizar", each if Text.Contains([Descrição do Produto], "IOGURTE") then "IOGURTE" else if Text.Contains([Descrição do Produto], "BATATA") then "BATATA KG" else if Text.Contains([Descrição do Produto], "BANANA B") then "BANANA KG" else if Text.Contains([Descrição do Produto], "BARRA") then "BARRA CEREAL" else if Text.Contains([Descrição do Produto], "BEB ENERG") then "ENERGETICO" else if Text.Contains([Descrição do Produto], "FARELO") then "AVEIA" else if Text.Contains([Descrição do Produto], "BISC") then "BOLACHA" else if Text.Contains([Descrição do Produto], "REFRIG") then "REFRIGERANTE" else if Text.Contains([Descrição do Produto], "YAKULT") then "YAKULT" else if Text.Contains([Descrição do Produto], "LAC 3") then "WHEY CAIXINHA" else if Text.Contains([Descrição do Produto], "CHOCOLATE TP") then "ACHOCOLATADO CAIXINHA" else if Text.Contains([Descrição do Produto], "ALIM CAST") then "BARRA CEREAL" else if Text.Contains([Descrição do Produto], "CEREAIS NUTRY") then "BARRA CEREAL" else if Text.Contains([Descrição do Produto], "SARDINHA") then "SARDINHA" else if Text.Contains([Descrição do Produto], "TOMATE L") then "TOMATE KG" else if Text.Contains([Descrição do Produto], "PIRAKI CH") then "ACHOCOLATADO CAIXINHA" else if Text.Contains([Descrição do Produto], "CERVEJA") then "CERVEJA" else if Text.StartsWith([Descrição do Produto], "CHOC ") then "CHOCOLATE " else if Text.StartsWith([Descrição do Produto], "LEITE") then "LEITE" else if Text.StartsWith([Descrição do Produto], "LIMAO") then "LIMAO KG" else if Text.Contains([Descrição do Produto], "HALLS") then "HALLS" else if Text.StartsWith([Descrição do Produto], "CAFE") then "CAFE" else if Text.StartsWith([Descrição do Produto], "MAMAO FO") then "MAMAO KG" else if Text.StartsWith([Descrição do Produto], "ALFACE") then "ALFACE" else if Text.StartsWith([Descrição do Produto], "AGRIAO") then "AGRIAO" else if Text.StartsWith([Descrição do Produto], "MELAO") then "MELAO KG" else if Text.StartsWith([Descrição do Produto], "MACA") then "MACA KG" else if Text.StartsWith([Descrição do Produto], "CAPPUCCINO") then "SACHE CAFE CAPPUCCINO" else if Text.Contains([Descrição do Produto], "MILHO V") then "MILHO" else if Text.StartsWith([Descrição do Produto], "CEBOLA") then "CEBOLA KG" else if Text.StartsWith([Descrição do Produto], "PAO") then "PAO KG" else if Text.Contains([Descrição do Produto], "QUEIJO R") then "QUEIJO RALADO" else if Text.Contains([Descrição do Produto], "MUSSARELA") then "QUEIJO" else if Text.Contains([Descrição do Produto], "SABON") then "SABONETE" else if Text.StartsWith([Descrição do Produto], "RUCULA") then "RUCULA" else if Text.Contains([Descrição do Produto], "SHAMPOO") then "SHAMPOO" else if Text.StartsWith([Descrição do Produto], "OVO") then "OVO" else if Text.StartsWith([Descrição do Produto], "MAMAO PA") then "MAMAO PAPAYA" else [Descrição do Produto]),
+				    #"Coluna Condicional Adicionada1" = Table.AddColumn(#"Colunas Removidas2", "Personalizar", each if Text.Contains([Descrição do Produto], "IOGURTE") then "IOGURTE" else if Text.Contains([Descrição do Produto], "BATATA") then "BATATA KG" else if Text.Contains([Descrição do Produto], "BANANA BRANC") then "BANANA KG" else if Text.Contains([Descrição do Produto], "BARRA PROT") then "BARRA CEREAL" else if Text.Contains([Descrição do Produto], "BEB ENERG") then "ENERGETICO" else if Text.Contains([Descrição do Produto], "FARELO") then "AVEIA" else if Text.Contains([Descrição do Produto], "BISC") then "BOLACHA" else if Text.Contains([Descrição do Produto], "REFRIG") then "REFRIGERANTE" else if Text.Contains([Descrição do Produto], "YAKULT") then "YAKULT" else if Text.Contains([Descrição do Produto], "LAC 3") then "WHEY CAIXINHA" else if Text.Contains([Descrição do Produto], "CHOCOLATE TP") then "ACHOCOLATADO CAIXINHA" else if Text.Contains([Descrição do Produto], "ALIM CAST") then "BARRA CEREAL" else if Text.Contains([Descrição do Produto], "CEREAIS NUTRY") then "BARRA CEREAL" else if Text.Contains([Descrição do Produto], "SARDINHA") then "SARDINHA" else if Text.Contains([Descrição do Produto], "TOMATE L") then "TOMATE KG" else if Text.Contains([Descrição do Produto], "PIRAKI CH") then "ACHOCOLATADO CAIXINHA" else if Text.Contains([Descrição do Produto], "CERVEJA") then "CERVEJA" else if Text.StartsWith([Descrição do Produto], "CHOC ") then "CHOCOLATE " else if Text.StartsWith([Descrição do Produto], "LEITE") then "LEITE" else if Text.StartsWith([Descrição do Produto], "LIMAO") then "LIMAO KG" else if Text.Contains([Descrição do Produto], "HALLS") then "HALLS" else if Text.StartsWith([Descrição do Produto], "CAFE") then "CAFE" else if Text.StartsWith([Descrição do Produto], "MAMAO FO") then "MAMAO KG" else if Text.StartsWith([Descrição do Produto], "ALFACE") then "ALFACE" else if Text.StartsWith([Descrição do Produto], "AGRIAO") then "AGRIAO" else if Text.StartsWith([Descrição do Produto], "MELAO") then "MELAO KG" else if Text.StartsWith([Descrição do Produto], "MACA G") then "MACA KG" else if Text.StartsWith([Descrição do Produto], "CAPPUCCINO") then "SACHE CAFE CAPPUCCINO" else if Text.Contains([Descrição do Produto], "MILHO V") then "MILHO" else if Text.StartsWith([Descrição do Produto], "CEBOLA") then "CEBOLA KG" else if Text.StartsWith([Descrição do Produto], "PAO") then "PAO KG" else if Text.Contains([Descrição do Produto], "QUEIJO R") then "QUEIJO RALADO" else if Text.Contains([Descrição do Produto], "MUSSARELA") then "QUEIJO" else if Text.Contains([Descrição do Produto], "SABON") then "SABONETE" else if Text.StartsWith([Descrição do Produto], "RUCULA") then "RUCULA" else if Text.Contains([Descrição do Produto], "SHAMPOO") then "SHAMPOO" else if Text.StartsWith([Descrição do Produto], "OVO") then "OVO" else if Text.StartsWith([Descrição do Produto], "MAMAO PA") then "MAMAO PAPAYA" else [Descrição do Produto]),
 				    #"Valor Substituído1" = Table.ReplaceValue(#"Coluna Condicional Adicionada1","PATINHO MOIDO BOV BEST BEEF ","PATINHO MOIDO KG",Replacer.ReplaceText,{"Descrição do Produto"}),
 				    #"Valor Substituído2" = Table.ReplaceValue(#"Valor Substituído1","PATINHO MOIDO BOV BEST BEEF ","PATINHO MOIDO KG",Replacer.ReplaceText,{"Personalizar"}),
-				    #"Valor Substituído3" = Table.ReplaceValue(#"Valor Substituído2","FILE PEITO AVE SERRA RESF (PED) (P) K","FILE PEITO AVE KG",Replacer.ReplaceText,{"Personalizar"})
+				    #"Valor Substituído3" = Table.ReplaceValue(#"Valor Substituído2","FILE PEITO AVE SERRA RESF (PED) (P) K","FILE PEITO AVE KG",Replacer.ReplaceText,{"Personalizar"}),
+				    #"Colunas Renomeadas" = Table.RenameColumns(#"Valor Substituído3",{{"Personalizar", "Produto Agrupado"}, {"Tot (R$)", "Total Prd (R$)"}})
 				in
-				    #"Valor Substituído3"
+				    #"Colunas Renomeadas"
 
 	annotation PBI_NavigationStepName = Navegação
 

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "23b43a6d8acb317e8776",
   "position": {
-    "x": 430.43706711249104,
+    "x": 403.53475041796037,
     "y": 0,
     "z": 1000,
     "height": 720.24838786720807,
-    "width": 849.868641031765,
+    "width": 764.27036064007643,
     "tabOrder": 1000
   },
   "visual": {
@@ -53,7 +53,7 @@
                           "Entity": "Mercado"
                         }
                       },
-                      "Property": "Tot (R$)"
+                      "Property": "Total Prd (R$)"
                     }
                   },
                   "Function": 0
@@ -69,16 +69,21 @@
         "sort": [
           {
             "field": {
-              "Column": {
+              "Aggregation": {
                 "Expression": {
-                  "SourceRef": {
-                    "Entity": "Mercado"
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Mercado"
+                      }
+                    },
+                    "Property": "Total Prd (R$)"
                   }
                 },
-                "Property": "Descrição do Produto"
+                "Function": 0
               }
             },
-            "direction": "Ascending"
+            "direction": "Descending"
           }
         ]
       }
@@ -128,56 +133,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "6080e1d87950aa17d58e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mercado"
-              }
-            },
-            "Property": "Descrição do Produto"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "3369e8a7401e218aa489",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mercado"
-              }
-            },
-            "Property": "Categoria"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "febb8eee3b08730a661c",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Mercado"
-                  }
-                },
-                "Property": "Tot (R$)"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }
