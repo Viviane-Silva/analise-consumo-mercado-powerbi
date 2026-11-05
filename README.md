@@ -53,6 +53,13 @@ O maior desafio deste projeto não foi a visualização, mas o tratamento de dad
 * **DAX** (Data Analysis Expressions)
 * **Power Query** (M Language)
 * **Excel** (Data Source)
+* **Python** (pipeline local com pandas e openpyxl)
+
+### Pipeline local Python
+
+O repositório também contém uma primeira pipeline local, independente do fluxo atual do Power BI. Ela lê a aba `Mercado 03-2026` da planilha Excel, aplica conversões e validações básicas, grava as linhas válidas em `data/bronze/mercado_bronze.csv` e as rejeitadas com seus motivos em `data/bronze/mercado_rejeitados.csv`. A coluna `linha_origem` registra o número da linha da planilha. O campo `produto_padronizado` atualmente apenas normaliza espaços; agrupamento de produtos e harmonização de unidades não fazem parte dessa etapa.
+
+O resultado informa `valid=False` quando há rejeições, embora ainda grave a Bronze com as linhas válidas; consumidores devem conferir esse indicador. O relatório Power BI continua usando a planilha como fonte; não há integração configurada com o CSV Bronze. A captura dos cupons também continua manual/assistida, e a linhagem por arquivo/aba/data de ingestão ainda não está completa. Há testes automatizados para os caminhos principais da pipeline, que podem ser executados com `pytest`.
 
 ---
 
